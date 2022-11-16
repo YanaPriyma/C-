@@ -1,13 +1,20 @@
 ﻿// На вход принимает число N на выходе целые числа от -N до N включительно
 Console.WriteLine("Введите число");
 int N = Convert.ToInt32(Console.ReadLine());
-count = -N;
-if(N >= 0)
+int count = -number;
+if(number >= 0)
 {
-while(count <= -N)
+while(count <= number)
 {
-    Console.WriteLine(count);
+    Console.Write(count+' ');
     count++;
 }
 }
-
+else
+{
+    while (count >= number)
+    {
+        Console.Write(count+' ');
+        count--
+    }
+}
