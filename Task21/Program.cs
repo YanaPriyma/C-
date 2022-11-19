@@ -17,3 +17,12 @@ Console.WriteLine("yb: ");
 int yb = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("zb: ");
 int zb = Convert.ToInt32(Console.ReadLine());
+
+double Distance (int X1,int Y1, int Z1, int X2, int Y2, int Z2 )
+{
+    double distance = Math.Sqrt(Math.Pow((X2-X1), 2) + Math.Pow((Y2-Y1), 2) + Math.Pow((Z2-Z1), 2));
+    return distance;
+}
+
+double result = Math.Round(Distance(xa, ya, za, xb, yb, zb), 2);
+Console.WriteLine(result);
