@@ -12,7 +12,7 @@ double b2 = Convert.ToDouble(Console.ReadLine());
 Console.WriteLine("Введите число k2: ");
 double k2 = Convert.ToDouble(Console.ReadLine());
 
-void Point(double a1, double c1, double a2, double c2)
+static (double, double) Point(double a1, double c1, double a2, double c2)
 {
     if (a1==a2 && c1==c2) Console.WriteLine ($"прямые совпадают");
     else if (c1==c2) Console.WriteLine ($"параллельные прямые");
@@ -22,9 +22,10 @@ void Point(double a1, double c1, double a2, double c2)
         double y = c2 * x + a2;
         x = Math.Round(x, 2);
         y = Math.Round(y, 2);
-        Console.WriteLine ($" -> ({x}; {y})");
+        //Console.WriteLine ($" -> ({x}; {y})");
     }
+    return (x, y);
 }
 
-Point(b1, k1, b2, k2);
+Console.WriteLine(Point(b1, k1, b2, k2));
 
